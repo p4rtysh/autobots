@@ -10,8 +10,8 @@ public class GerenciadorAutobots {
 
     private List<Autobot> lista = new ArrayList<>();
 
-    public void adicionar(Autobot a) {
-        lista.add(a);
+    public void adicionar(Autobot autobot) {
+        lista.add(autobot);
     }
 
     public double calcularEnergonTotal() {
