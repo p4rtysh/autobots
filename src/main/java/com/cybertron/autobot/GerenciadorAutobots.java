@@ -31,20 +31,20 @@ public class GerenciadorAutobots {
         return null;
     }
 
-    public void reparar(Autobot a) {
+    public void reparar(Autobot autobot) {
         try {
-            if (a.energon < 0) {
+            if (autobot.energon < 0) {
                 throw new Exception("Energon negativo");
             }
-            a.energon = a.energon + 100;
-        } catch (Exception ex) {
+            autobot.energon = autobot.energon + 100;
+        } catch (Exception ex) { // erro 3 encontrado: catch vazio!!!!! absurdo
         }
     }
 
-    public String classificar(Autobot a) {
-        if (a.energon > 500) {
+    public String classificar(Autobot autobot) {
+        if (autobot.energon > 500) {
             return "ELITE";
-        } else if (a.energon > 200) {
+        } else if (autobot.energon > 200) {
             return "PADRAO";
         } else {
             return "RESERVA";
