@@ -8,7 +8,7 @@ import java.util.List;
  */
 public class GerenciadorAutobots {
 
-    private List<Autobot> lista = new ArrayList<>();
+    private final List<Autobot> lista = new ArrayList<>(); // erro 1 encontrado: <List()> é final
 
     public void adicionar(Autobot autobot) {
         lista.add(autobot);
