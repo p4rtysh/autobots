@@ -38,7 +38,9 @@ public class GerenciadorAutobots {
             }
             autobot.energon = autobot.energon + 100;
         } catch (Exception ex) { // erro 3 encontrado: catch vazio!!!!! absurdo
-        }
+                throw new RuntimeException("Não foi possível reparar o autobot. Tente novamente.");
+        } // usei o RuntimeException para não apagar o erro do exception ali em cima
+          // e mostrar os dois erros. isso tbm fica melhor de debuggar depois;
     }
 
     public String classificar(Autobot autobot) {
