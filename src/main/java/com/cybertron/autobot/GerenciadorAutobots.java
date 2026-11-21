@@ -23,9 +23,9 @@ public class GerenciadorAutobots {
     }
 
     public Autobot buscar(String nome) {
-        for (Autobot a : lista) {
-            if (a.nome == nome) {
-                return a;
+        for (Autobot autobot : lista) {
+            if (autobot.nome.equals(nome)) { // erro 2 encontrado: string n usa '==', usa equals
+                return autobot;
             }
         }
         return null;
