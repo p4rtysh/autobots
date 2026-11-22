@@ -1,7 +1,7 @@
 package com.cybertron.autobot;
 
 /**
- * Representa um Autobot da base.
+ * Representa um Autobot da base. Os atributos são protegidos e acessados pelos métodos Getters (pensando em escalabilidade do projeto)
  */
 public class Autobot {
 
