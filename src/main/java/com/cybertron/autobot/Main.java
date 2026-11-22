@@ -17,8 +17,6 @@ public class Main {
         gerenciador.adicionar(bumblebee);
         gerenciador.adicionar(ratchet);
 
-        System.out.println("Energon total: " + gerenciador.calcularEnergonTotal());
-
         Autobot encontrado = gerenciador.buscar("Bumblebee");
         if (encontrado != null) {
             System.out.println("Encontrado: " + encontrado.nome);

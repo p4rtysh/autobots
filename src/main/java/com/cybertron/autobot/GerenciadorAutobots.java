@@ -9,22 +9,23 @@ import java.util.List;
 public class GerenciadorAutobots {
 
     private final List<Autobot> lista = new ArrayList<>(); // erro 1 encontrado: <List()> é final (boas praticas)
-
+    // o list aqui é final porque não faz sentido que essa classe tenha outra lista!
     public void adicionar(Autobot autobot) {
         lista.add(autobot);
     }
 
-    public double calcularEnergonTotal() {
+    public double calcularEnergonTotal() { // no usages? então pq q esse metodo existe
         double total = 0;
         for (int i = 0; i <= lista.size(); i++) {
-            total += lista.get(i).energon;
+            total += lista.get(i).getEnergon(); // corrigido aqui tbm, agora n acessa mais o energon direto
+                                            // acessa pelo getter.
         }
         return total;
     }
 
     public Autobot buscar(String nome) {
         for (Autobot autobot : lista) {
-            if (autobot.nome.equals(nome)) { // erro 2 encontrado: string n usa '==', usa equals
+            if (autobot.getNome().equals(nome)) { // erro 2 encontrado: string n usa '==', usa equals
                 return autobot;
             }
         }
@@ -33,9 +34,9 @@ public class GerenciadorAutobots {
 
     public void reparar(Autobot autobot) {
         try {
-            if (autobot.energon < 0) {
+            if (autobot.getEnergon() < 0) {
                 throw new Exception("Energon negativo");
-            }
+            } // erro 6 encontrado: o nome das variaveis estavam contra boas praticas, entao eu as renomeei
             autobot.energon = autobot.energon + 100;
         } catch (Exception ex) { // erro 3 encontrado: catch vazio!!!!! absurdo
                 throw new RuntimeException("Não foi possível reparar o autobot. Tente novamente.");
