@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Gerencia os Autobots da base.
+ * Gerencia os Autobots da base, calcula os Energon de cada autobot, busca por autobot na lista, repara e classifica os autobots.
  */
 public class GerenciadorAutobots {
 
