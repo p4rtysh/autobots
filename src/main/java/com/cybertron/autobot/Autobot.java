@@ -5,9 +5,21 @@ package com.cybertron.autobot;
  */
 public class Autobot {
 
-    public String nome;
-    public double energon;
-    public int nivel;
+    protected String nome; // tudo publico aqui, falha de segurança!!!!
+    protected double energon; // ou seja, erro 5 encontrado: atributos publicos é algo perigoso
+    protected int nivel; // entao deixei eles protected, para que a classe GerenciadorAutobots possa acessar mas
+                        // nao possa alterar
+    public String getNome() {
+        return nome;
+    }
+
+    public double getEnergon() {
+        return energon;
+    }
+
+    public int getNivel() {
+        return nivel;
+    }
 
     public Autobot(String nome, double energon, int nivel) {
         this.nome = nome;
