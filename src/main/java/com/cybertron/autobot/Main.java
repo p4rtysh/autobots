@@ -1,7 +1,7 @@
 package com.cybertron.autobot;
 
 /**
- * Ponto de entrada da base dos Autobots.
+ * Ponto de entrada da base dos Autobots. Adiciona novos autobots à base.
  */
 public class Main {
 
